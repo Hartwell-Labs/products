@@ -1,5 +1,0 @@
-# Local development
-set -a
-source "$(dirname "$0")/../.env" 2>/dev/null || source ~/Downloads/atlas-credentials.env
-set +a
-exec ruby "$(dirname "$0")/../app.rb"
