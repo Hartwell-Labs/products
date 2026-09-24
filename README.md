@@ -1,4 +1,17 @@
-# Hartwell Labs — Products Registry
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Hartwell-Labs/.github/main/profile/assets/hartwell-logo.svg" width="72" alt="Hartwell Labs" />
+
+## Products Registry
+
+Machine-readable index of every Hartwell Labs product — repos, packages, containers.
+
+[![Ruby](https://img.shields.io/badge/Ruby-Sinatra%20·%20MongoDB-F15A24?style=flat-square&logo=ruby)](.) [![API](https://img.shields.io/badge/API-live-2cb67d?style=flat-square)](.)
+[![License](https://img.shields.io/badge/license-MIT-F15A24?style=flat-square)](LICENSE) [![Website](https://img.shields.io/badge/site-hartwell--labs.github.io-4f46e5?style=flat-square)](https://hartwell-labs.github.io)
+
+[Website](https://hartwell-labs.github.io) · [All products](https://hartwell-labs.github.io/products/) · [Security](https://hartwell-labs.github.io/security/) · [Hack the Lab](https://github.com/Hartwell-Labs/hack-the-lab)
+
+</div>
 
 > **"Which of these tools is actually a Hartwell Labs product?"** — this API is the answer.
 > One machine-readable index of every Hartwell Labs product: source repos, published
@@ -63,3 +76,14 @@ via `MONGODB_DB` / `MONGODB_COLLECTION` env vars.
 
 MIT — part of the Hartwell Labs toolset. Security reports: see
 [hack-the-lab](https://github.com/Hartwell-Labs/hack-the-lab) (safe harbor).
+---
+
+<div align="center">
+
+**[Hartwell Labs](https://github.com/Hartwell-Labs)** — security systems, languages and tools, built in the open.
+
+[Website](https://hartwell-labs.github.io) · [All products](https://hartwell-labs.github.io/products/) · [Security policy](https://hartwell-labs.github.io/security/) · [Report a vulnerability](https://hartwell-labs.github.io/security/)
+
+<sub>MIT License · © 2026 Hartwell Labs</sub>
+
+</div>
