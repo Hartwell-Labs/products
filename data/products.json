@@ -1,80 +1,273 @@
 {
   "org": {
     "name": "Hartwell Labs",
-    "description": "Independent open-source lab building security-adjacent developer tools.",
-    "website": "https://hartwell-labs.github.io",
+    "description": "Independent engineering company from Szczecin, Poland. Security infrastructure, developer tools and one proprietary intelligence platform.",
+    "website": "https://hartwell-labs.pl",
     "github": "https://github.com/Hartwell-Labs",
-    "contact": "bartosz.osiej2007@gmail.com"
+    "contact": "bartosz.osiej2007@gmail.com",
+    "docs": "https://wiki.hartwell-labs.pl",
+    "llms": "https://hartwell-labs.pl/llms.txt"
   },
   "products": [
     {
       "slug": "talus-process-monitor",
-      "name": "talus",
+      "name": "talus-process-monitor",
       "tagline": "eBPF ransomware detection with auto-kill for Linux",
       "description": "Endpoint detection & response agent for Linux, written in Rust. eBPF tracepoints (execve/openat/unlink/mkdir) score a 1-second sliding window per process and SIGKILL threats automatically. Single static binary, no kernel module, no signatures. The agent sandboxes itself (CAP_BPF|CAP_PERFMON|CAP_NET_ADMIN, seccomp + Landlock).",
       "language": "Rust",
       "license": "MIT",
       "status": "active",
-      "repo": "https://github.com/BartoszOsiej/talus-process-monitor",
-      "homepage": "https://bartoszosiej.github.io/talus-process-monitor",
-      "topics": ["ebpf", "ransomware-detection", "linux-security", "edr", "rust", "hids"],
+      "repo": "https://github.com/Hartwell-Labs/talus-process-monitor",
+      "homepage": "https://hartwell-labs.pl/talus-process-monitor/",
+      "topics": [
+        "ebpf",
+        "ransomware-detection",
+        "linux-security",
+        "edr",
+        "rust",
+        "hids"
+      ],
       "packages": [
-        { "registry": "pypi", "name": "talus-process-monitor", "version": "0.8.2", "url": "https://pypi.org/project/talus-process-monitor/" },
-        { "registry": "github-releases", "name": "BartoszOsiej/talus-process-monitor", "version": "v0.8.2", "url": "https://github.com/BartoszOsiej/talus-process-monitor/releases" }
+        {
+          "registry": "pypi",
+          "name": "talus-process-monitor",
+          "version": "0.8.3",
+          "url": "https://pypi.org/project/talus-process-monitor/"
+        },
+        {
+          "registry": "cargo",
+          "name": "process-monitor",
+          "version": "0.8.3",
+          "url": "https://crates.io/crates/process-monitor"
+        },
+        {
+          "registry": "github-releases",
+          "name": "Hartwell-Labs/talus-process-monitor",
+          "version": "v0.8.3",
+          "url": "https://github.com/Hartwell-Labs/talus-process-monitor/releases"
+        }
       ],
       "containers": [
-        { "registry": "ghcr", "image": "ghcr.io/hartwell-labs/talus-process-monitor", "tags": ["latest", "sha-*"] }
-      ]
+        {
+          "registry": "ghcr",
+          "image": "ghcr.io/hartwell-labs/talus-process-monitor",
+          "tags": [
+            "latest",
+            "sha-*"
+          ]
+        }
+      ],
+      "site": "https://hartwell-labs.pl/talus-process-monitor/",
+      "docs": "https://wiki.hartwell-labs.pl/projects/talus-process-monitor/"
     },
     {
       "slug": "externum",
       "name": "externum",
-      "tagline": "A typed language that compiles to Python, Bash and native bytecode",
-      "description": "Self-hosted programming language: Python-style readability with enforced type declarations, inline Bash for system control, and compilation to a standalone .exbc bytecode artifact. Struct/enum/trait/impl, match-case, defer, string interpolation, TUI IDE, REPL, browser playground, built-in DRM/licensing stack. NEW in 4.3: externum translate — import existing Python (AST-based) and Rust (heuristic) code. 400+ tests in CI.",
-      "language": "Externum / Python",
+      "tagline": "A typed language that compiles to readable Python, Bash and native bytecode",
+      "description": "Self-hosted programming language: pattern matching and pipeline syntax compile to readable Python, Bash and native EXBC bytecode. Ships a REPL and a Pro Pack toolchain, 400+ tests.",
+      "language": "Rust",
       "license": "MIT",
       "status": "active",
-      "repo": "https://github.com/BartoszOsiej/externum",
-      "homepage": "https://bartoszosiej.github.io/externum/",
-      "topics": ["programming-language", "compiler", "transpiler", "bytecode", "python", "bash", "dsl"],
-      "packages": [
-        { "registry": "pypi", "name": "externum", "version": "4.3.0", "url": "https://pypi.org/project/externum/" }
+      "repo": "https://github.com/Hartwell-Labs/externum",
+      "topics": [
+        "compiler",
+        "language",
+        "rust",
+        "python",
+        "codegen"
       ],
-      "containers": [
-        { "registry": "ghcr", "image": "ghcr.io/hartwell-labs/externum", "tags": ["latest", "sha-*"] }
+      "site": "https://hartwell-labs.pl/externum/",
+      "docs": "https://wiki.hartwell-labs.pl/projects/externum/",
+      "packages": [
+        {
+          "registry": "pypi",
+          "name": "externum",
+          "url": "https://pypi.org/project/externum/"
+        }
       ]
     },
     {
-      "slug": "aurora-os",
-      "name": "Aurora OS",
-      "tagline": "A complete operating system running in your browser",
-      "description": "From-scratch desktop environment running entirely client-side: kernel with typed EventBus and process table, window manager (drag, 8-handle resize), POSIX-inspired virtual filesystem, terminal with 36+ commands, 14 apps (Files, Editor, Paint, System Monitor, Minesweeper…), full-system snapshots (.aurora v2, SHA-256), 5 themes + animated wallpapers, procedural WebAudio. Zero runtime dependencies.",
-      "language": "TypeScript",
+      "slug": "quantum-shield",
+      "name": "quantum-shield",
+      "tagline": "Post-quantum file encryption (ML-KEM-768 + AES-256-GCM)",
+      "description": "Single static CLI that encrypts files with ML-KEM-768 key encapsulation and AES-256-GCM authenticated encryption. Pipes into scripts, backups and CI.",
+      "language": "Rust",
       "license": "MIT",
       "status": "active",
-      "repo": "https://github.com/BartoszOsiej/Aurora",
-      "homepage": "https://bartoszosiej.github.io/Aurora/",
-      "topics": ["browser-os", "web-desktop", "operating-system", "typescript", "zero-dependency"],
-      "packages": [
-        { "registry": "npm", "name": "@hartwell-labs/aurora-os", "version": "1.1.0", "url": "https://github.com/Hartwell-Labs/orgs/packages" }
+      "repo": "https://github.com/Hartwell-Labs/quantum-shield",
+      "topics": [
+        "post-quantum",
+        "cryptography",
+        "ml-kem",
+        "cli"
       ],
-      "containers": [
-        { "registry": "ghcr", "image": "ghcr.io/hartwell-labs/aurora", "tags": ["latest", "v1.1.0", "1.1.0", "sha-*"] }
-      ]
+      "site": "https://hartwell-labs.pl/quantum-shield/",
+      "packages": []
+    },
+    {
+      "slug": "linux-aegis",
+      "name": "linux-aegis",
+      "tagline": "Stackable Linux Security Module (LSM) with in-tree upstream patches",
+      "description": "Feature-flagged LSM layers shipped as in-tree patches, with CI and QEMU boot tests.",
+      "language": "Rust",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/linux-aegis",
+      "topics": [
+        "linux",
+        "lsm",
+        "kernel",
+        "security"
+      ],
+      "site": "https://hartwell-labs.pl/linux-aegis/",
+      "packages": []
+    },
+    {
+      "slug": "fortis",
+      "name": "fortis",
+      "tagline": "RISC-V chain-of-trust with measured boot on QEMU virt",
+      "description": "Bare-metal RISC-V chain of trust: real SHA-256 and ML-KEM-768 post-quantum measured boot.",
+      "language": "Rust",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/fortis",
+      "topics": [
+        "risc-v",
+        "attestation",
+        "measured-boot",
+        "post-quantum"
+      ],
+      "site": "https://hartwell-labs.pl/fortis/",
+      "packages": []
+    },
+    {
+      "slug": "labtrace",
+      "name": "labtrace",
+      "tagline": "Forensic timeline reconstruction for Linux audit telemetry",
+      "description": "Rules LT001-LT010 find single-event signals; taint tracking propagates sensitive data through file writes, exec arguments and child processes; correlation fuses findings sharing a process chain into ranked incidents. No agent required on the host.",
+      "language": "Rust",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/labtrace",
+      "topics": [
+        "forensics",
+        "auditd",
+        "taint-analysis",
+        "dfir",
+        "linux"
+      ],
+      "site": "https://hartwell-labs.pl/labtrace/",
+      "packages": []
+    },
+    {
+      "slug": "labbridge",
+      "name": "labbridge",
+      "tagline": "Rust to Ruby bridge for Hartwell Labs programs",
+      "description": "Translate Hartwell Labs Rust to runnable Ruby, and Ruby plugins back into Rust via the LabPlugin trait. Targets verified against the Products Registry.",
+      "language": "Ruby \u00b7 Rust",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/labbridge",
+      "topics": [
+        "ruby",
+        "rust",
+        "ffi",
+        "tooling"
+      ],
+      "site": "https://hartwell-labs.pl/labbridge/",
+      "packages": []
+    },
+    {
+      "slug": "CyberForge",
+      "name": "CyberForge",
+      "tagline": "Four Rust security tools: recon, web, hash and packets",
+      "description": "ShadowScan, PacketEye, NetRecon and HashSleuth in one Tokio async workspace, published to crates.io.",
+      "language": "Rust",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/CyberForge",
+      "topics": [
+        "security",
+        "scanner",
+        "forensics",
+        "tooling"
+      ],
+      "site": "https://hartwell-labs.pl/CyberForge/",
+      "docs": "https://wiki.hartwell-labs.pl/projects/cybersec-tools/",
+      "packages": []
     },
     {
       "slug": "hack-the-lab",
-      "name": "Hack the Lab",
-      "tagline": "Attack our open-source products — get CVEs and a Hall of Fame entry",
-      "description": "Hartwell Labs publicly exposes its own tools: escape the browser-OS VFS, break the language sandbox, evade the eBPF ransomware detector. Concrete challenges instead of a vague security.txt. Safe harbor, coordinated disclosure, <48h response time. CVEs where warranted, public Hall of Fame.",
-      "language": "n/a (security program)",
+      "name": "hack-the-lab",
+      "tagline": "Break our products before someone else does",
+      "description": "Security challenges, CVE credits and the Hartwell Labs Hall of Fame.",
+      "language": "Markdown",
       "license": "MIT",
       "status": "active",
       "repo": "https://github.com/Hartwell-Labs/hack-the-lab",
-      "homepage": "https://github.com/Hartwell-Labs/hack-the-lab",
-      "topics": ["security", "bug-bounty", "safe-harbor", "cve", "hall-of-fame"],
-      "packages": [],
-      "containers": []
+      "topics": [
+        "ctf",
+        "security",
+        "challenges"
+      ],
+      "site": "https://hartwell-labs.pl/hack-the-lab/",
+      "packages": []
+    },
+    {
+      "slug": "scryer-core",
+      "name": "scryer-core",
+      "tagline": "Proprietary internal intelligence platform",
+      "description": "Public-intelligence ingestion (BZP/BIP), KSC/NIS2 scoring and passive DNS audit. Self-hosted, access on request, security-first.",
+      "language": "Python",
+      "license": "Proprietary",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/products#scryer-core",
+      "topics": [
+        "osint",
+        "nis2",
+        "threat-intelligence"
+      ],
+      "site": "https://hartwell-labs.pl/scryer-core/",
+      "packages": []
+    },
+    {
+      "slug": "photoscrub",
+      "name": "photoscrub",
+      "tagline": "See what your photos leak, then remove it",
+      "description": "Finds GPS coordinates, embedded thumbnails, body serials, XMP/IPTC fields, PNG text chunks, data appended after the image, GPS in video containers and PII in free text, then writes metadata-free copies. Passive, local, no upload. Windows and Linux. Source is closed; licence keys are Ed25519-signed and machine-bound.",
+      "language": "Python",
+      "license": "Proprietary",
+      "status": "active",
+      "repo": "https://github.com/BartoszOsiej/photoscrub",
+      "topics": [
+        "privacy",
+        "exif",
+        "metadata",
+        "photos"
+      ],
+      "site": "https://hartwell-labs.pl/photoscrub/",
+      "packages": []
+    },
+    {
+      "slug": "TrustNode",
+      "name": "TrustNode",
+      "tagline": "A Solana-like validator built from scratch in Rust",
+      "description": "PoH clock, Tower BFT consensus, Sealevel-style parallel execution, Turbine propagation with Reed-Solomon erasure coding, CRDS gossip over real UDP, fee-priority mempool and an SBF-inspired program executor. 12 crates, 228 tests. Research-grade: never run on mainnet.",
+      "language": "Rust",
+      "license": "MIT",
+      "status": "research",
+      "repo": "https://github.com/BartoszOsiej/TrustNode",
+      "topics": [
+        "solana",
+        "consensus",
+        "rust",
+        "blockchain",
+        "p2p"
+      ],
+      "site": "https://hartwell-labs.pl/trustnode/",
+      "docs": "https://wiki.hartwell-labs.pl/projects/solana-validator/",
+      "packages": []
     }
-  ]
+  ],
+  "updated": "2026-10-15"
 }

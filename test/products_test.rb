@@ -20,10 +20,31 @@ class CatalogDataTest < Minitest::Test
     assert @catalog[:org]["website"]
   end
 
-  def test_all_three_flagships_present
+  def test_flagships_present
     slugs = @products.map { |p| p["slug"] }
-    %w[talus-process-monitor externum aurora-os].each do |s|
+    %w[talus-process-monitor externum labtrace].each do |s|
       assert_includes slugs, s
+    end
+  end
+
+  def test_removed_products_are_gone
+    slugs = @products.map { |p| p["slug"] }
+    %w[aurora-os].each do |s|
+      refute_includes slugs, s
+    end
+  end
+
+  def test_every_product_has_a_site_or_repo_link
+    @products.each do |p|
+      assert p["site"] || p["repo"], "#{p["slug"]} has neither site nor repo"
+    end
+  end
+
+  def test_no_stale_forks_in_repo_urls
+    @products.each do |p|
+      next unless p["repo"].include?("github.com/BartoszOsiej/")
+      assert_includes %w[photoscrub TrustNode], p["slug"],
+                       "#{p["slug"]} points at the personal account but is not a personal project"
     end
   end
 

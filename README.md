@@ -9,7 +9,7 @@ Machine-readable index of every Hartwell Labs product — repos, packages, conta
 [![Ruby](https://img.shields.io/badge/Ruby-Sinatra%20·%20MongoDB-F15A24?style=flat-square&logo=ruby)](.) [![API](https://img.shields.io/badge/API-live-2cb67d?style=flat-square)](.)
 [![License](https://img.shields.io/badge/license-MIT-F15A24?style=flat-square)](LICENSE) [![Website](https://img.shields.io/badge/site-hartwell--labs.github.io-4f46e5?style=flat-square)](https://hartwell-labs.github.io)
 
-[Website](https://hartwell-labs.github.io) · [All products](https://hartwell-labs.github.io/products/) · [Security](https://hartwell-labs.github.io/security/) · [Hack the Lab](https://github.com/Hartwell-Labs/hack-the-lab)
+[Website](https://hartwell-labs.pl) · [All products](https://hartwell-labs.pl/products/) · [Docs](https://wiki.hartwell-labs.pl) · [Security](https://hartwell-labs.pl/security/) · [llms.txt](https://hartwell-labs.pl/llms.txt) · [Hack the Lab](https://github.com/Hartwell-Labs/hack-the-lab)
 
 </div>
 
@@ -17,11 +17,11 @@ Machine-readable index of every Hartwell Labs product — repos, packages, conta
 > One machine-readable index of every Hartwell Labs product: source repos, published
 > packages (PyPI / npm / GitHub Packages) and containers (GHCR), wherever they live.
 
-Built for [Hartwell Labs](https://hartwell-labs.github.io) — an independent open-source
-lab behind [talus](https://github.com/BartoszOsiej/talus-process-monitor) (eBPF ransomware
-detection), [externum](https://github.com/BartoszOsiej/externum) (a typed language that
-compiles to Python/Bash/bytecode) and [Aurora OS](https://github.com/BartoszOsiej/Aurora)
-(a full desktop environment in the browser).
+Built for [Hartwell Labs](https://hartwell-labs.pl) — an independent engineering
+company behind [talus-process-monitor](https://github.com/Hartwell-Labs/talus-process-monitor)
+(eBPF ransomware detection and response), [externum](https://github.com/Hartwell-Labs/externum)
+(a typed language that compiles to Python/Bash/bytecode) and [labtrace](https://github.com/Hartwell-Labs/labtrace)
+(forensic timeline reconstruction for audit telemetry).
 
 A Hartwell Labs product. Ruby · Sinatra · MongoDB Atlas.
 
