@@ -214,6 +214,32 @@
       "packages": []
     },
     {
+      "slug": "aurora-os",
+      "name": "Aurora",
+      "tagline": "A complete operating system in the browser",
+      "description": "Operating system in a browser tab: kernel, window manager, filesystem, eight apps and procedural audio, zero runtime dependencies. TypeScript.",
+      "language": "TypeScript",
+      "license": "MIT",
+      "status": "active",
+      "repo": "https://github.com/Hartwell-Labs/Aurora",
+      "site": "https://hartwell-labs.pl/Aurora/",
+      "docs": "https://wiki.hartwell-labs.pl/projects/aurora-os/",
+      "topics": [
+        "os",
+        "browser",
+        "typescript",
+        "virtual-machine",
+        "graphics"
+      ],
+      "packages": [
+        {
+          "registry": "npm",
+          "name": "aurora-os",
+          "url": "https://www.npmjs.com/package/aurora-os"
+        }
+      ]
+    },
+    {
       "slug": "scryer-core",
       "name": "scryer-core",
       "tagline": "Proprietary internal intelligence platform",

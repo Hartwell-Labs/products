@@ -22,15 +22,8 @@ class CatalogDataTest < Minitest::Test
 
   def test_flagships_present
     slugs = @products.map { |p| p["slug"] }
-    %w[talus-process-monitor externum labtrace].each do |s|
+    %w[talus-process-monitor externum aurora-os labtrace].each do |s|
       assert_includes slugs, s
-    end
-  end
-
-  def test_removed_products_are_gone
-    slugs = @products.map { |p| p["slug"] }
-    %w[aurora-os].each do |s|
-      refute_includes slugs, s
     end
   end
 
