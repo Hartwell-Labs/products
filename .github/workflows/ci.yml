@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# The organisation profile says every feature ships with tests or it does not
+# ship. This repository had a test file and no workflow to run it, so the claim
+# was not true of it.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+      - name: Run the test suite
+        run: bundle exec ruby -Itest test/products_test.rb
